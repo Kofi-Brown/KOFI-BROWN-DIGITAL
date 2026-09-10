@@ -1,0 +1,17 @@
+{
+  "name": "Kofi Brown Digital",
+  "short_name": "Kofi Brown",
+  "description": "Web development and digital solutions by Kofi Brown Digital.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#070a0e",
+  "theme_color": "#f8a800",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

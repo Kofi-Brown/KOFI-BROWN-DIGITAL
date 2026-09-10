@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+<rect width="1200" height="420" rx="40" fill="#080B0F"/>
+<g transform="translate(70 65)">
+  <path d="M0 245V20h55v90L155 20h78l-111 105 119 120h-78L55 145v100z" fill="#F8A800"/>
+  <path d="M220 20h90c58 0 92 31 92 78 0 48-34 79-92 79h-36v68h-54zm54 50v57h31c28 0 43-9 43-29s-15-28-43-28z" fill="#F5F5F5"/>
+  <rect x="195" y="152" width="126" height="82" rx="18" fill="#111820" stroke="#F8A800" stroke-width="6"/>
+  <path d="M220 193l22-20 22 20-22 20zM271 173h27v40h-27" fill="none" stroke="#F5F5F5" stroke-width="8"/>
+</g>
+<text x="475" y="185" fill="#F5F5F5" font-family="Arial, sans-serif" font-size="74" font-weight="800" letter-spacing="3">KOFI BROWN</text>
+<text x="480" y="255" fill="#F8A800" font-family="Arial, sans-serif" font-size="45" font-weight="700" letter-spacing="16">DIGITAL</text>
+<text x="480" y="315" fill="#B9C0C8" font-family="Arial, sans-serif" font-size="25">WE BUILD DIGITAL EXPERIENCES.</text>
+</svg>

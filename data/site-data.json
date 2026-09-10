@@ -1,0 +1,29 @@
+{
+  "brand": "Kofi Brown Digital",
+  "contact": {
+    "whatsapp": "233505458313",
+    "display": "0505458313"
+  },
+  "services": [
+    "Website Development",
+    "E-Commerce",
+    "Web Applications",
+    "UI/UX Design"
+  ],
+  "projects": [
+    {
+      "name": "Seasyn9 Bistro",
+      "type": "Restaurant website & ordering system",
+      "page": "seasyn9.html"
+    }
+  ],
+  "platform_modules": [
+    "Enquiries",
+    "Projects",
+    "Testimonials",
+    "Content",
+    "Proposals",
+    "Invoices",
+    "Analytics"
+  ]
+}

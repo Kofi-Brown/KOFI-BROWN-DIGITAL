@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070a0e">
+<title>404 — Kofi Brown Digital</title>
+<link rel="icon" href="logo.svg"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="styles.css">
+<style>
+.error-wrap{min-height:calc(100vh - 150px);display:grid;place-items:center;padding:125px 0 70px}
+.error-card{max-width:920px;width:100%;text-align:center;position:relative}
+.code-orbit{position:relative;width:min(310px,72vw);height:min(310px,72vw);margin:0 auto 35px;display:grid;place-items:center}
+.code-orbit:before,.code-orbit:after{content:"";position:absolute;inset:0;border:1px solid #28343f;border-radius:50%;animation:spin 12s linear infinite}
+.code-orbit:after{inset:13%;border-color:rgba(248,168,0,.35);animation:spinReverse 8s linear infinite}
+.orbit-dot{position:absolute;top:3px;left:50%;width:10px;height:10px;border-radius:50%;background:#f8a800;box-shadow:0 0 25px #f8a800;transform:translateX(-50%)}
+.error-number{font-size:clamp(85px,17vw,170px);line-height:.8;font-weight:950;letter-spacing:-12px;margin:0;background:linear-gradient(180deg,#fff,#f8a800);-webkit-background-clip:text;background-clip:text;color:transparent}
+.terminal{max-width:620px;margin:25px auto;background:#090e14;border:1px solid #28343f;border-radius:17px;text-align:left;overflow:hidden;box-shadow:0 25px 80px #000}
+.term-top{padding:11px 15px;border-bottom:1px solid #28343f;color:#68747e;font-size:12px}
+.term-body{padding:18px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;color:#aeb7c1}
+.term-body b{color:#f8a800}.cursor{display:inline-block;width:7px;height:14px;background:#f8a800;vertical-align:-2px;animation:blink 1s steps(2) infinite}
+.error-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.mini-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:25px;font-size:13px;color:#aeb7c1}.mini-links a:hover{color:#f8a800}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes spinReverse{to{transform:rotate(-360deg)}}@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.code-orbit:before,.code-orbit:after,.orbit-dot,.cursor{animation:none}}
+</style>
+</head>
+<body><div class="splash"><div class="splash-logo"><div class="splash-mark">KB</div><div class="splash-name">KOFI BROWN DIGITAL</div><div class="splash-line"><i></i></div></div></div><div class="page-transition"></div>
+
+<div class="mobile-appbar">
+  <a class="app-title" href="index.html"><span>KB</span> KOFI BROWN DIGITAL</a>
+  <span class="app-status" aria-label="online"></span>
+</div>
+
+<div id="bar"></div>
+<nav id="nav"><div class="wrap nav">
+<a class="brand" href="index.html"><span>KB</span> <b>KOFI BROWN</b><small>DIGITAL</small></a>
+<div class="links" id="links">
+<a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Packages</a><a href="contact.html">Contact</a>
+</div>
+<button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">☾</button><a class="btn" href="contact.html">Get a Quote →</a><button class="menu" id="menu">☰</button>
+</div></nav>
+
+<main class="error-wrap">
+<div class="wrap error-card reveal show">
+<div class="code-orbit">
+<div class="orbit-dot"></div>
+<div class="error-number">404</div>
+</div>
+<div class="kicker">SYSTEM MESSAGE • PAGE NOT FOUND</div>
+<h1 class="title">Looks like this page <span class="gold">went offline.</span></h1>
+<p class="lead" style="margin:0 auto">The page you requested doesn't exist, moved, or decided to take a little digital vacation.</p>
+
+<div class="terminal">
+<div class="term-top">kofi-brown-digital / terminal</div>
+<div class="term-body">
+<span>$ locate requested_page</span><br>
+&gt; scanning routes...<br>
+&gt; checking portfolio...<br>
+&gt; checking services...<br>
+&gt; <b>ERROR: route not found</b><br>
+&gt; recommendation: return to a safe route<span class="cursor"></span>
+</div>
+</div>
+
+<div class="error-actions">
+<a class="btn" href="index.html">← Take Me Home</a>
+<a class="btn alt" href="portfolio.html">Explore Our Work</a>
+</div>
+
+<div class="mini-links">
+<a href="about.html">About</a><a href="services.html">Services</a><a href="pricing.html">Packages</a><a href="contact.html">Start a Project</a>
+</div>
+</div>
+</main>
+
+<footer><div class="wrap footer">
+<div>© 2026 Kofi Brown Digital. All rights reserved.</div>
+<div class="social"><a href="https://instagram.com/kofibrowndigital" target="_blank">Instagram</a><a href="contact.html">WhatsApp</a><a href="contact.html">LinkedIn</a></div>
+<div>We Build Digital Experiences.</div>
+</div></footer>
+<script src="script.js"></script>
+<div class="mobile-bottomnav"><a class="" href="index.html"><span class="nav-icon">⌂</span>Home</a><a class="" href="services.html"><span class="nav-icon">◈</span>Services</a><a class="" href="portfolio.html"><span class="nav-icon">▣</span>Work</a><a class="" href="contact.html"><span class="nav-icon">✉</span>Contact</a></div>
+<a class="wa-fab" href="https://wa.me/233505458313" target="_blank" aria-label="Chat on WhatsApp">✆</a><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js").catch(()=>{});}</script></body>
+</html>
