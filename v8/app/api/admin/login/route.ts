@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server"; import {createAdminSession} from "@/lib/session";
+export async function POST(request:Request){const b=await request.json();if(String(b?.email||"")!==process.env.ADMIN_EMAIL||String(b?.password||"")!==process.env.ADMIN_PASSWORD)return NextResponse.json({error:"Invalid credentials."},{status:401});await createAdminSession();return NextResponse.json({ok:true})}
