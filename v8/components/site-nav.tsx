@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function SiteNav(){return <header className="nav"><Link className="brand" href="/"><span className="brand-mark">KB</span><span>Kofi Brown <b>Digital</b></span></Link><nav><Link href="/#services">Services</Link><Link href="/#work">Work</Link><Link href="/#about">About</Link><Link href="/contact">Contact</Link></nav><a className="nav-cta" href="https://wa.me/233505458313">WhatsApp</a></header>}
