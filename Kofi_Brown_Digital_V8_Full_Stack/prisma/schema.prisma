@@ -1,0 +1,88 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" }
+
+enum EnquiryStatus { NEW CONTACTED QUALIFIED PROPOSAL_SENT WON LOST }
+enum ProjectStatus { PLANNED ACTIVE REVIEW COMPLETED PAUSED }
+enum ProposalStatus { DRAFT SENT ACCEPTED DECLINED EXPIRED }
+enum InvoiceStatus { DRAFT SENT PARTIAL PAID OVERDUE CANCELLED }
+
+model Client {
+  id String @id @default(cuid())
+  name String
+  email String
+  phone String?
+  company String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  enquiries Enquiry[]
+  projects Project[]
+  proposals Proposal[]
+  invoices Invoice[]
+}
+model Enquiry {
+  id String @id @default(cuid())
+  name String
+  email String
+  phone String?
+  company String?
+  service String?
+  budget String?
+  message String
+  status EnquiryStatus @default(NEW)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  clientId String?
+  client Client? @relation(fields:[clientId],references:[id],onDelete:SetNull)
+  @@index([status])
+  @@index([createdAt])
+}
+model Project {
+  id String @id @default(cuid())
+  name String
+  slug String @unique
+  description String?
+  status ProjectStatus @default(PLANNED)
+  value Int?
+  startDate DateTime?
+  dueDate DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  clientId String?
+  client Client? @relation(fields:[clientId],references:[id],onDelete:SetNull)
+}
+model Proposal {
+  id String @id @default(cuid())
+  title String
+  reference String @unique
+  amount Int
+  currency String @default("GHS")
+  status ProposalStatus @default(DRAFT)
+  validUntil DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  clientId String?
+  client Client? @relation(fields:[clientId],references:[id],onDelete:SetNull)
+}
+model Invoice {
+  id String @id @default(cuid())
+  number String @unique
+  amount Int
+  currency String @default("GHS")
+  status InvoiceStatus @default(DRAFT)
+  dueDate DateTime?
+  paidAt DateTime?
+  paystackRef String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  clientId String?
+  client Client? @relation(fields:[clientId],references:[id],onDelete:SetNull)
+}
+model Testimonial {
+  id String @id @default(cuid())
+  clientName String
+  company String?
+  quote String
+  rating Int @default(5)
+  published Boolean @default(false)
+  createdAt DateTime @default(now())
+}
