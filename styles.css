@@ -226,3 +226,20 @@ body.light input,body.light textarea,body.light select{background:#fff;color:#14
   body.light .mobile-appbar,body.light .mobile-bottomnav{background:rgba(244,246,249,.96)}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+
+/* Portfolio: balanced editorial grid instead of a narrow horizontal strip */
+.projects-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow:visible;scroll-snap-type:none;padding:0}
+.projects-track .card{min-width:0;width:100%;height:100%}
+.projects-track .project-body .btn{margin-right:7px}
+.projects-track .project-body>a:not(.btn){font-size:12px}
+#project-seasyn9 .thumb{background:radial-gradient(circle at 80% 18%,rgba(255,184,92,.32),transparent 31%),linear-gradient(135deg,#422719,#11151a)}
+#project-docflow .thumb{background:radial-gradient(circle at 80% 18%,rgba(105,176,255,.28),transparent 31%),linear-gradient(135deg,#152e43,#0b1119)}
+#project-rockytech .thumb{background:radial-gradient(circle at 80% 18%,rgba(166,194,156,.28),transparent 31%),linear-gradient(135deg,#233b32,#0b1118)}
+#project-globalbank .thumb{background:radial-gradient(circle at 80% 18%,rgba(127,167,255,.3),transparent 31%),linear-gradient(135deg,#192a4b,#0b1118)}
+#project-akoma .thumb{background:radial-gradient(circle at 80% 18%,rgba(255,130,172,.3),transparent 31%),linear-gradient(135deg,#482035,#111018)}
+#project-globalconnect .thumb{background:radial-gradient(circle at 80% 18%,rgba(113,221,214,.28),transparent 31%),linear-gradient(135deg,#163b3d,#0b1118)}
+#project-cyclecare .thumb{background:radial-gradient(circle at 80% 18%,rgba(199,151,255,.28),transparent 31%),linear-gradient(135deg,#32264c,#0b1118)}
+#project-kbdigital .thumb{background:radial-gradient(circle at 80% 18%,rgba(255,194,71,.3),transparent 31%),linear-gradient(135deg,#49351a,#0b1118)}
+@media(max-width:900px){.projects-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.projects-track{grid-template-columns:1fr;gap:14px}.projects-track .card{min-width:0}.projects-track .thumb{height:175px}}
