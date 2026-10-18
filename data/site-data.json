@@ -8,13 +8,55 @@
     "Website Development",
     "E-Commerce",
     "Web Applications",
-    "UI/UX Design"
+    "UI/UX Design",
+    "Business Automation",
+    "Maintenance"
   ],
   "projects": [
     {
+      "name": "Kofi Brown Digital",
+      "type": "Agency website & portfolio",
+      "status": "Live portfolio",
+      "page": "index.html",
+      "demo": "https://kofi-brown-digital.vercel.app"
+    },
+    {
       "name": "Seasyn9 Bistro",
-      "type": "Restaurant website & ordering system",
-      "page": "seasyn9.html"
+      "type": "Restaurant website & ordering concept",
+      "status": "Case study available",
+      "page": "seasyn9.html",
+      "repository": "https://github.com/Kofi-Brown/seasyn9-bistro-final"
+    },
+    {
+      "name": "Docflow GH",
+      "type": "Document automation SaaS",
+      "status": "In development",
+      "repository": "https://github.com/Kofi-Brown/docflow-gh"
+    },
+    {
+      "name": "ROCKYTECH Construction and Civil Works",
+      "type": "Construction business website concept",
+      "status": "Showcase concept"
+    },
+    {
+      "name": "GlobalBank",
+      "type": "Banking web-app prototype",
+      "status": "Prototype; not a live banking service"
+    },
+    {
+      "name": "AKOMA",
+      "type": "Africa-focused matchmaking platform",
+      "status": "In development"
+    },
+    {
+      "name": "GlobalConnect",
+      "type": "Virtual business-number marketplace",
+      "status": "Concept / planning"
+    },
+    {
+      "name": "Cycle-tracking App",
+      "type": "Menstrual cycle tracking concept",
+      "status": "Concept / planning"
     }
   ],
   "platform_modules": [
