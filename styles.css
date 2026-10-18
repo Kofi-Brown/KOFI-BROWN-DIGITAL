@@ -243,3 +243,16 @@ body.light input,body.light textarea,body.light select{background:#fff;color:#14
 #project-kbdigital .thumb{background:radial-gradient(circle at 80% 18%,rgba(255,194,71,.3),transparent 31%),linear-gradient(135deg,#49351a,#0b1118)}
 @media(max-width:900px){.projects-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.projects-track{grid-template-columns:1fr;gap:14px}.projects-track .card{min-width:0}.projects-track .thumb{height:175px}}
+
+
+/* Keyboard accessibility: visible focus without changing the visual system */
+:where(a,button,input,textarea,select,[tabindex]):focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+  border-radius:8px;
+}
+button:disabled,[aria-disabled="true"]{cursor:not-allowed;opacity:.65}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
